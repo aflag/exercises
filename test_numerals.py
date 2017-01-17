@@ -28,6 +28,13 @@ def test_zero_not_found():
         _find_greatest_lower_bound(0)
 
 
+def test_allow_classes_with_index():
+    class Two:
+        def __index__(self):
+            return 2
+    assert roman(Two()) == 'II'
+
+
 def test_find_one():
     assert (1, 'I') == _find_greatest_lower_bound(1)
 
