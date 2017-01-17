@@ -3,6 +3,11 @@ import pytest
 from numerals import roman, _find_greatest_lower_bound
 
 
+def test_negative_is_invalid():
+    with pytest.raises(TypeError):
+        roman(-7)
+
+
 def test_zero_is_invalid():
     with pytest.raises(TypeError):
         roman(0)
