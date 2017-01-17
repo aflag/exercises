@@ -25,6 +25,7 @@ def _find_greatest_lower_bound(x):
 
 
 def roman(x):
+    """Return roman numeral representation of an integer"""
     x = operator.index(x)
     if not (0 < x < 5000):
         raise TypeError("Only numbers in (0, 5000) interval are accepted")
