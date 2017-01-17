@@ -1,1 +1,4 @@
 *.sw[po]
+.cache
+.coverage
+__pycache__
