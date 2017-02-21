@@ -4,6 +4,7 @@ import algorithms
 import network
 import parser
 
+
 def _distance_report(rails, paths):
     output = ""
     for path in paths:
