@@ -5,8 +5,16 @@ from network import Network, Route
 class RouteTestCase(unittest.TestCase):
 
     def test_last_property_route_one_item(self):
-        route = Route(["A"], 5)
+        route = Route(["A"], 0)
         self.assertEqual(route.last, "A")
+
+    def test_stops(self):
+        route = Route(["A", "B"], 2)
+        self.assertEqual(route.stops, 1)
+
+    def test_stops_one_node(self):
+        route = Route(["A"], 0)
+        self.assertEqual(route.stops, 0)
 
     def test_last_property_two_items(self):
         route = Route(["A", "B"], 5)
